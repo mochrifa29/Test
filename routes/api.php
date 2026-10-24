@@ -9,6 +9,13 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('/rfq', [RfqController::class, 'store']);
+
+
+Route::get('/products', [RfqController::class, 'products']);
+
+
+
+
 Route::get('/rfq-form', function () {
     return view('rfq.create');
 });
